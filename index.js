@@ -48,6 +48,6 @@ app.get('/api/timestamp/', function (req, res) {
     var naturalDate = naturalDate.toLocaleDateString('en-us', formatDate);
     res.json({ unix: unixDate, natural: naturalDate });
 });
-app.listen(3000, function () {
+app.listen(process.env.PORT || 3000, function () {
     console.log('App is working');
 });
